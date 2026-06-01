@@ -9,7 +9,7 @@ formSolicitud.addEventListener("submit", function(e) {
     const genero = document.getElementById("genero").value;
     const observacion = document.getElementById("observacion").value.trim();
 
-    const numeroWhatsApp = "59100000000";
+    const numeroWhatsApp = "59175830320";
 
     const mensaje =
         `Hola Avidez Pistas Bolivia, quiero solicitar una pista instrumental.%0A%0A` +
