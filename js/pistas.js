@@ -5,17 +5,29 @@ const sinResultados = document.getElementById("sinResultados");
 
 let generoActual = "Todos";
 
+function limpiarTexto(texto) {
+    return texto
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "");
+}
+
 function mostrarPistas() {
-    const texto = buscador.value.toLowerCase().trim();
+    const texto = limpiarTexto(buscador.value.trim());
 
     listaPistas.innerHTML = "";
 
-    const resultados = pistas.filter(pista => {
-        const coincideGenero = generoActual === "Todos" || pista.genero === generoActual;
-        const contenido = `${pista.titulo} ${pista.artista} ${pista.genero} ${pista.tono} ${pista.bpm}`.toLowerCase();
+    const resultados = pistas
+        .filter(pista => {
+            const coincideGenero = generoActual === "Todos" || pista.genero === generoActual;
 
-        return coincideGenero && contenido.includes(texto);
-    });
+            const contenido = limpiarTexto(
+                `${pista.titulo} ${pista.artista} ${pista.genero} ${pista.tono} ${pista.bpm}`
+            );
+
+            return coincideGenero && contenido.includes(texto);
+        })
+        .sort((a, b) => a.titulo.localeCompare(b.titulo));
 
     resultados.forEach(pista => {
         const tarjeta = document.createElement("div");

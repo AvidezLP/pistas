@@ -1,25 +1,42 @@
 const listaGrupos = document.getElementById("listaGrupos");
 const buscadorGrupos = document.getElementById("buscadorGrupos");
 
+function limpiarTexto(texto) {
+    return texto
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "");
+}
+
 function mostrarGrupos() {
-    const texto = buscadorGrupos.value.toLowerCase().trim();
+    const texto = limpiarTexto(buscadorGrupos.value.trim());
 
     listaGrupos.innerHTML = "";
 
     grupos
         .filter(grupo => {
-            const contenido = `${grupo.nombre} ${grupo.descripcion} ${grupo.generoPrincipal}`.toLowerCase();
+            const contenido = limpiarTexto(
+                `${grupo.nombre} ${grupo.descripcion} ${grupo.generoPrincipal}`
+            );
+
             return contenido.includes(texto);
         })
+        .sort((a, b) => a.nombre.localeCompare(b.nombre))
         .forEach(grupo => {
             const total = pistas.filter(p => p.grupoId === grupo.id).length;
-            const item = document.createElement("div");
 
+            const item = document.createElement("div");
             item.className = "col-md-6 col-lg-4";
 
             item.innerHTML = `
                 <div class="group-card">
-                    <div class="group-cover">
+
+                    <img src="${grupo.imagen}"
+                         alt="${grupo.nombre}"
+                         class="group-img"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+
+                    <div class="group-cover" style="display:none;">
                         <i class="bi bi-folder2-open"></i>
                     </div>
 
@@ -36,6 +53,7 @@ function mostrarGrupos() {
                         <i class="bi bi-eye"></i>
                         Ver repertorio
                     </a>
+
                 </div>
             `;
 

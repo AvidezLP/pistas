@@ -13,15 +13,27 @@ const sinResultados = document.getElementById("sinResultados");
 nombreGrupo.textContent = grupo.nombre;
 descripcionGrupo.textContent = grupo.descripcion;
 
+function limpiarTexto(texto) {
+    return texto
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "");
+}
+
 function mostrarRepertorio() {
-    const texto = buscadorGrupo.value.toLowerCase().trim();
+    const texto = limpiarTexto(buscadorGrupo.value.trim());
 
     listaRepertorio.innerHTML = "";
 
-    const repertorio = pistas.filter(p => p.grupoId === grupo.id);
+    const repertorio = pistas
+        .filter(p => p.grupoId === grupo.id)
+        .sort((a, b) => a.titulo.localeCompare(b.titulo));
 
     const resultados = repertorio.filter(pista => {
-        const contenido = `${pista.titulo} ${pista.artista} ${pista.genero} ${pista.tono} ${pista.bpm}`.toLowerCase();
+        const contenido = limpiarTexto(
+            `${pista.titulo} ${pista.artista} ${pista.genero} ${pista.tono} ${pista.bpm}`
+        );
+
         return contenido.includes(texto);
     });
 

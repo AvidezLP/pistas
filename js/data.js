@@ -2,139 +2,72 @@ const grupos = [
     {
         id: "explosion-cumbiera",
         nombre: "Explosión Cumbiera",
-        descripcion: "Repertorio de ejemplo para pistas de cumbia con sabor y sureña.",
-        generoPrincipal: "Cumbia con Sabor"
+        descripcion: "Repertorio de ejemplo para pistas de cumbia con sabor.",
+        generoPrincipal: "Cumbia con Sabor",
+        imagen: "assets/img/grupos/explosion-cumbiera.jpg"
     },
+
     {
         id: "sangre-cumbiera",
         nombre: "Sangre Cumbiera",
-        descripcion: "Carpeta de ejemplo para organizar instrumentales por grupo.",
-        generoPrincipal: "Cumbia Sureña"
+        descripcion: "Repertorio de ejemplo para pistas de cumbia sureña.",
+        generoPrincipal: "Cumbia Sureña",
+        imagen: "assets/img/grupos/sangre-cumbiera.jpg"
     },
+
     {
         id: "maroyu",
         nombre: "Maroyu",
-        descripcion: "Repertorio de ejemplo para cumbia chicha y tropical.",
-        generoPrincipal: "Cumbia Chicha"
+        descripcion: "Repertorio de ejemplo para cumbia chicha.",
+        generoPrincipal: "Cumbia Chicha",
+        imagen: "assets/img/grupos/maroyu.jpg"
     }
 ];
 
 const pistas = [
-    {
-        titulo: "MiX Cuatro Palabras / Bebiendo Lágrimas / Para Que Quiero Un Corazón / Amor Se Escribe con Llanto",
-        artista: "Explosión Cumbiera",
-        grupoId: "explosion-cumbiera",
-        genero: "Cumbia con Sabor",
-        tono: "",
-        bpm: "93",
-        duracion: "8:34",
-        descarga: "https://www.mediafire.com/file/dv9fkn0y1eihxjv/MiX_Cuatro_Palabras_Bebiendo_L%25C3%25A1grimas_Para_Que_Quiero_Un_Coraz%25C3%25B3n_Amor_Se_Escribe_con_Llanto_-_Explosi%25C3%25B3n_Cumbiera.mp3/file"
-    },
-    {
-        titulo: "MiX Amor Se Escribe Con Llanto - Explosión Cumbiera",
-        artista: "Explosión Cumbiera",
-        grupoId: "explosion-cumbiera",
-        genero: "Cumbia con Sabor",
-        tono: "",
-        bpm: "93",
-        duracion: "1:09",
-        descarga: "https://www.mediafire.com/file/2lov5l2lxdbb3om/MiX_Amor_Se_Escribe_Con_Llanto_-_Explosi%25C3%25B3n_Cumbiera.mp3/file"
-    },
-    {
-        titulo: "MiX Bebiendo Lágrimas - Explosión Cumbiera",
-        artista: "Explosión Cumbiera",
-        grupoId: "explosion-cumbiera",
-        genero: "Cumbia con Sabor",
-        tono: "",
-        bpm: "93",
-        duracion: "1:44",
-        descarga: "https://www.mediafire.com/file/as94jtnxnpxcupv/MiX_Bebiendo_L%25C3%25A1grimas_-_Explosi%25C3%25B3n_Cumbiera.mp3/file"
-    },
-    {
-        titulo: "MiX Cuatro Palabras - Explosión Cumbiera",
-        artista: "Explosión Cumbiera",
-        grupoId: "explosion-cumbiera",
-        genero: "Cumbia con Sabor",
-        tono: "",
-        bpm: "93",
-        duracion: "1:43",
-        descarga: "https://www.mediafire.com/file/u0x3k8486dq5etd/MiX_Cuatro_Palabras_-_Explosi%25C3%25B3n_Cumbiera.mp3/file"
-    },
-    {
-        titulo: "MiX Historia De Un Amor - Explosión Cumbiera",
-        artista: "Explosión Cumbiera",
-        grupoId: "explosion-cumbiera",
-        genero: "Cumbia con Sabor",
-        tono: "",
-        bpm: "93",
-        duracion: "2:04",
-        descarga: "https://www.mediafire.com/file/j2kw3374yz3bdj6/MiX_Historia_De_Un_Amor_-_Explosi%25C3%25B3n_Cumbiera.mp3/file"
-    },
-    {
-        titulo: "MiX Para Que Quiero Un Corazón - Explosión Cumbiera",
-        artista: "Explosión Cumbiera",
-        grupoId: "explosion-cumbiera",
-        genero: "Cumbia con Sabor",
-        tono: "",
-        bpm: "93",
-        duracion: "1:53",
-        descarga: "https://www.mediafire.com/file/9pj3sunhe2nqptw/MiX_Para_Que_Quiero_Un_Coraz%25C3%25B3n_-_Explosi%25C3%25B3n_Cumbiera.mp3/file"
-    },
-    {
-        titulo: "Ejemplo - Cumbia Sureña",
-        artista: "Sangre Cumbiera",
-        grupoId: "sangre-cumbiera",
-        genero: "Cumbia Sureña",
-        tono: "Mim",
-        bpm: "94",
-        duracion: "4:25",
-        demo: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3",
-        descarga: "https://www.mediafire.com/"
-    },
-    {
-        titulo: "Ejemplo - Cumbia Chicha",
-        artista: "Maroyu",
-        grupoId: "maroyu",
-        genero: "Cumbia Chicha",
-        tono: "Rem",
-        bpm: "100",
-        duracion: "3:45",
-        demo: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3",
-        descarga: "https://www.mediafire.com/"
-    }
+    ...(typeof explosionCumbiera !== "undefined" ? explosionCumbiera : []),
+    ...(typeof sangreCumbiera !== "undefined" ? sangreCumbiera : []),
+    ...(typeof maroyu !== "undefined" ? maroyu : [])
 ];
 
 function crearTarjetaPista(pista) {
+
+    const grupo = grupos.find(g => g.id === pista.grupoId);
+
     return `
         <div class="track-card">
-            <div class="track-cover">
-                <i class="bi bi-music-note-list"></i>
-            </div>
+
+            <img src="${grupo?.imagen || 'assets/img/grupos/default.jpg'}"
+                 alt="${pista.artista}"
+                 class="track-img">
 
             <h3>${pista.titulo}</h3>
 
             <p class="text-secondary mb-0">
-                Grupo/Referencia: ${pista.artista}
+                Grupo: ${pista.artista}
             </p>
 
             <div class="track-meta">
-                <span><i class="bi bi-vinyl"></i> ${pista.genero}</span>
-                <span><i class="bi bi-music-note"></i> Tono: ${pista.tono}</span>
-                <span><i class="bi bi-speedometer2"></i> ${pista.bpm} BPM</span>
-                <span><i class="bi bi-clock"></i> ${pista.duracion}</span>
+                <span>${pista.genero}</span>
+                <span>${pista.tono}</span>
+                <span>${pista.bpm} BPM</span>
             </div>
 
-            <div>
-                <a href="${pista.descarga}" class="btn-download" target="_blank">
-               <i class="bi bi-download"></i>
-                Descargar
+            <div class="mt-3">
+                <a href="${pista.descarga}"
+                   target="_blank"
+                   class="btn-download">
+
+                    <i class="bi bi-download"></i>
+                    Descargar
+
                 </a>
             </div>
 
             <div class="donation-mini">
                 <p>
                     <i class="bi bi-heart"></i>
-                    La descarga es gratis. Si gustas apoyar el proyecto, puedes hacer una donación voluntaria.
+                    ¿Te gusta este proyecto?
                 </p>
 
                 <a href="donar.html" class="btn-donate">
@@ -142,6 +75,7 @@ function crearTarjetaPista(pista) {
                     Donar voluntariamente
                 </a>
             </div>
+
         </div>
     `;
 }

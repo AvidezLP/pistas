@@ -501,3 +501,26 @@ audio {
         margin-top: 12px;
     }
 }
+
+.group-img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 18px;
+    margin-bottom: 16px;
+    border: 1px solid rgba(56, 189, 248, .25);
+}
+
+.track-img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:18px;
+    margin-bottom:16px;
+    border:1px solid rgba(56,189,248,.25);
+    transition:.3s;
+}
+
+.track-card:hover .track-img{
+    transform:scale(1.03);
+}
