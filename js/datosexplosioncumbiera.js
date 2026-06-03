@@ -85,9 +85,9 @@ const explosionCumbiera = [
         descarga: "https://www.mediafire.com/file/8kdci6n3qudujo8/El_Tel%25C3%25A9fono_-_Explosion_Cumbiera_instrumental.mp3/file"
     },
     {
-        titulo: "Mis Nostalgias (ReMiX) (feat. David Castro)",
-        artista: "Explosión Cumbiera",
-        grupoId: "explosion-cumbiera",
+        titulo: "Mis Nostalgias (ReMiX)",
+        artista: "Explosión Cumbiera, David Castro",
+        grupos: ["explosion-cumbiera", "davidcastro"],
         genero: "Cumbia con Sabor",
         tono: "-",
         bpm: "91",
@@ -95,9 +95,9 @@ const explosionCumbiera = [
         descarga: "https://www.mediafire.com/file/rcak2fjsa4qj9q2/Mis_Nostalgias_%2528ReMiX%2529_%2528feat._David_Castro%2529_-_instrumental.mp3/file"
     },
     {
-        titulo: "Partido En Dos (feat. Jhonny y Su Agrupación Claros & El Cartel Q'mbiero) instrumental",
-        artista: "Explosión Cumbiera",
-        grupoId: "explosion-cumbiera",
+        titulo: "Partido En Dos",
+        artista: "Explosión Cumbiera, Jhonny Y Su Agrupación Claros, El New Cartel Cumbiero",
+        grupos: ["explosion-cumbiera", "grupoclaros","cartelcumbiero"],
         genero: "Cumbia con Sabor",
         tono: "-",
         bpm: "95",
@@ -115,9 +115,9 @@ const explosionCumbiera = [
         descarga: "https://www.mediafire.com/file/dvf7jcxohvmtlnm/La_Cita_-_Explosion_Cumbiera_instrumental.mp3/file"
     },
     {
-        titulo: "Tattoo (ReMiX) (feat. Jhonny y Su Agrupación Claros & El Cartel Q'mbiero)",
+        titulo: "Tattoo (ReMiX)",
         artista: "Explosión Cumbiera",
-        grupoId: "explosion-cumbiera",
+        grupos: ["explosion-cumbiera", "grupoclaros","cartelcumbiero"],
         genero: "Cumbia con Sabor",
         tono: "-",
         bpm: "98",
@@ -155,9 +155,9 @@ const explosionCumbiera = [
         descarga: "https://www.mediafire.com/file/s9q07sagprhk1co/Prometi_No_Enamorarme_-_Explosion_Cumbiera_instrumental.mp3/file"
     },
     {
-        titulo: "Pero Esa Vez, Lloré (feat. David Castro)",
-        artista: "Explosión Cumbiera",
-        grupoId: "explosion-cumbiera",
+        titulo: "Pero Esa Vez, Lloré",
+        artista: "Explosión Cumbiera, David Castro",
+        grupos: ["explosion-cumbiera", "davidcastro"],
         genero: "Cumbia con Sabor",
         tono: "-",
         bpm: "91",
@@ -175,9 +175,9 @@ const explosionCumbiera = [
         descarga: "https://www.mediafire.com/file/fkhagfiiv2yhz2c/MiX_Negro_Camino__Migajas_De_Amor__Hombre_Solitario_instrumental.mp3/file"
     },
     {
-        titulo: "Todavía (feat. David Castro)",
-        artista: "Explosión Cumbiera",
-        grupoId: "explosion-cumbiera",
+        titulo: "Todavía",
+        artista: "Explosión Cumbiera, David Castro",
+        grupos: ["explosion-cumbiera", "davidcastro"],
         genero: "Cumbia con Sabor",
         tono: "-",
         bpm: "91",
@@ -225,9 +225,9 @@ const explosionCumbiera = [
         descarga: "https://www.mediafire.com/file/2fsxritfmki31qa/Ya_Ser%25C3%25A1_Tarde_-_Explosion_Cumbiera_instrumental.mp3/file"
     },
     {
-        titulo: "Todo Lo Aprendí De Ti (feat. David Castro)",
-        artista: "Explosión Cumbiera",
-        grupoId: "explosion-cumbiera",
+        titulo: "Todo Lo Aprendí De Ti",
+        artista: "Explosión Cumbiera, David Castro",
+        grupos: ["explosion-cumbiera", "davidcastro"],
         genero: "Cumbia con Sabor",
         tono: "-",
         bpm: "91",
@@ -255,9 +255,9 @@ const explosionCumbiera = [
         descarga: "https://www.mediafire.com/file/ufzqal6icduiz7d/Mi+Historia+Entre+Tus+Dedos++Labios+Compartidos++Otra+Como+Tú+instrumental.mp3/file"
     },
     {
-        titulo: "Gracias Por Tu Adiós (feat. David Castro)",
-        artista: "Explosión Cumbiera",
-        grupoId: "explosion-cumbiera",
+        titulo: "Gracias Por Tu Adiós",
+        artista: "Explosión Cumbiera, David Castro",
+        grupos: ["explosion-cumbiera", "davidcastro"],
         genero: "Cumbia con Sabor",
         tono: "-",
         bpm: "91",
@@ -265,9 +265,9 @@ const explosionCumbiera = [
         descarga: "https://www.mediafire.com/file/909bvgvb6syqime/Gracias+Por+Tu+Adiós+(feat.+David+Castro)+(Instrumental).mp3/file"
     },
     {
-        titulo: "Que Bien Se Ve (feat. David Castro)",
-        artista: "Explosión Cumbiera",
-        grupoId: "explosion-cumbiera",
+        titulo: "Que Bien Se Ve",
+        artista: "Explosión Cumbiera, David Castro",
+        grupos: ["explosion-cumbiera", "davidcastro"],
         genero: "Cumbia con Sabor",
         tono: "-",
         bpm: "91",

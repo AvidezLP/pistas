@@ -28,6 +28,27 @@ const grupos = [
         descripcion: "Repertorio de instrumentales",
         generoPrincipal: "Cumbia con Sabor",
         imagen: "assets/img/grupos/turromantikos.jpeg"
+    },
+    {
+        id: "davidcastro",
+        nombre: "David Castro",
+        descripcion: "Repertorio de instrumentales",
+        generoPrincipal: "Cumbia Tropical",
+        imagen: "assets/img/grupos/david-castro.jpg"
+    },
+    {
+        id: "cartelcumbiero",
+        nombre: "El New Cartel Cumbiero",
+        descripcion: "Repertorio de instrumentales",
+        generoPrincipal: "Cumbia Tropical",
+        imagen: "assets/img/grupos/cartelcumbiero.png"
+    },
+    {
+        id: "grupoclaros",
+        nombre: "Jhonny Y Su Agrupación Claros",
+        descripcion: "Repertorio de instrumentales",
+        generoPrincipal: "Cumbia Chicha",
+        imagen: "assets/img/grupos/grupoclaros.jpg"
     }
 ];
 
@@ -35,6 +56,9 @@ const pistas = [
     ...(typeof explosionCumbiera !== "undefined" ? explosionCumbiera : []),
     ...(typeof sangreCumbiera !== "undefined" ? sangreCumbiera : []),
     ...(typeof turromantikos !== "undefined" ? turromantikos : []),
+    ...(typeof davidcastro !== "undefined" ? davidcastro : []),
+    ...(typeof cartelcumbiero !== "undefined" ? cartelcumbiero : []),
+    ...(typeof grupoclaros !== "undefined" ? grupoclaros : []),
     ...(typeof maroyu !== "undefined" ? maroyu : [])
 ];
 
@@ -56,18 +80,27 @@ function crearTarjetaPista(pista) {
         <img src="${imagenes[0]}"
              alt="${pista.artista}"
              class="track-img-single">
-    ` : `
+    ` : imagenes.length === 2 ? `
         <div class="track-img-split">
-            <img src="${imagenes[0]}"
-                 alt="${pista.artista}">
-
-            <img src="${imagenes[1]}"
-                 alt="${pista.artista}">
+            <img src="${imagenes[0]}" alt="${pista.artista}">
+            <img src="${imagenes[1]}" alt="${pista.artista}">
+        </div>
+    ` : imagenes.length === 3 ? `
+        <div class="track-img-grid-3">
+            <img src="${imagenes[0]}" alt="${pista.artista}">
+            <img src="${imagenes[1]}" alt="${pista.artista}">
+            <img src="${imagenes[2]}" alt="${pista.artista}">
+        </div>
+    ` : `
+        <div class="track-img-grid-4">
+            <img src="${imagenes[0]}" alt="${pista.artista}">
+            <img src="${imagenes[1]}" alt="${pista.artista}">
+            <img src="${imagenes[2]}" alt="${pista.artista}">
+            <img src="${imagenes[3]}" alt="${pista.artista}">
         </div>
     `}
 
 </div>
-
             <h3>${pista.titulo}</h3>
 
             <p class="text-secondary mb-0">

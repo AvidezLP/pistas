@@ -1,8 +1,8 @@
-const maroyu = [
+const grupoclaros = [
     {
         titulo: "",
-        artista: "Maroyu",
-        grupoId: "maroyu",
+        artista: "Jhonny Y Su Agrupación Claros",
+        grupoId: "grupoclaros",
         genero: "Cumbia Chicha",
         tono: "-",
         bpm: "93",
