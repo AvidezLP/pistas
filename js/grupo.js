@@ -26,8 +26,11 @@ function mostrarRepertorio() {
     listaRepertorio.innerHTML = "";
 
     const repertorio = pistas
-        .filter(p => p.grupoId === grupo.id)
-        .sort((a, b) => a.titulo.localeCompare(b.titulo));
+    .filter(p =>
+        p.grupoId === grupo.id ||
+        (p.grupos && p.grupos.includes(grupo.id))
+    )
+    .sort((a, b) => a.titulo.localeCompare(b.titulo));
 
     const resultados = repertorio.filter(pista => {
         const contenido = limpiarTexto(

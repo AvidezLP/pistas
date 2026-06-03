@@ -2,7 +2,7 @@ const grupos = [
     {
         id: "explosion-cumbiera",
         nombre: "Explosión Cumbiera",
-        descripcion: "Repertorio de ejemplo para pistas de cumbia con sabor.",
+        descripcion: "Repertorio de instrumentales",
         generoPrincipal: "Cumbia con Sabor",
         imagen: "assets/img/grupos/explosion-cumbiera.jpg"
     },
@@ -10,36 +10,63 @@ const grupos = [
     {
         id: "sangre-cumbiera",
         nombre: "Sangre Cumbiera",
-        descripcion: "Repertorio de ejemplo para pistas de cumbia sureña.",
-        generoPrincipal: "Cumbia Sureña",
+        descripcion: "Repertorio de instrumentales",
+        generoPrincipal: "Cumbia con Sabor",
         imagen: "assets/img/grupos/sangre-cumbiera.jpg"
     },
 
     {
         id: "maroyu",
         nombre: "Maroyu",
-        descripcion: "Repertorio de ejemplo para cumbia chicha.",
+        descripcion: "Repertorio de instrumentales",
         generoPrincipal: "Cumbia Chicha",
         imagen: "assets/img/grupos/maroyu.jpg"
+    },
+    {
+        id: "turromantikos",
+        nombre: "Turromantikos",
+        descripcion: "Repertorio de instrumentales",
+        generoPrincipal: "Cumbia con Sabor",
+        imagen: "assets/img/grupos/turromantikos.jpeg"
     }
 ];
 
 const pistas = [
     ...(typeof explosionCumbiera !== "undefined" ? explosionCumbiera : []),
     ...(typeof sangreCumbiera !== "undefined" ? sangreCumbiera : []),
+    ...(typeof turromantikos !== "undefined" ? turromantikos : []),
     ...(typeof maroyu !== "undefined" ? maroyu : [])
 ];
 
 function crearTarjetaPista(pista) {
 
-    const grupo = grupos.find(g => g.id === pista.grupoId);
+    const gruposPista = pista.grupos || [pista.grupoId];
+
+    const imagenes = gruposPista.map(id => {
+        const grupo = grupos.find(g => g.id === id);
+        return grupo?.imagen || "assets/img/grupos/default.jpg";
+    });
 
     return `
         <div class="track-card">
 
-            <img src="${grupo?.imagen || 'assets/img/grupos/default.jpg'}"
-                 alt="${pista.artista}"
-                 class="track-img">
+           <div class="track-cover-images">
+
+    ${imagenes.length === 1 ? `
+        <img src="${imagenes[0]}"
+             alt="${pista.artista}"
+             class="track-img-single">
+    ` : `
+        <div class="track-img-split">
+            <img src="${imagenes[0]}"
+                 alt="${pista.artista}">
+
+            <img src="${imagenes[1]}"
+                 alt="${pista.artista}">
+        </div>
+    `}
+
+</div>
 
             <h3>${pista.titulo}</h3>
 
