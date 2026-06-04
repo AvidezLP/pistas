@@ -1,5 +1,12 @@
 const grupos = [
     {
+        id: "divinas",
+        nombre: "Divinas",
+        descripcion: "Repertorio de instrumentales",
+        generoPrincipal: "Cumbia con Sabor",
+        imagen: "assets/img/grupos/divinas.jpg"
+    },
+    {
         id: "explosion-cumbiera",
         nombre: "Explosión Cumbiera",
         descripcion: "Repertorio de instrumentales",
@@ -88,6 +95,7 @@ const grupos = [
 ];
 
 const pistas = [
+    ...(typeof divinas !== "undefined" ? divinas : []),
     ...(typeof explosionCumbiera !== "undefined" ? explosionCumbiera : []),
     ...(typeof sangreCumbiera !== "undefined" ? sangreCumbiera : []),
     ...(typeof desolasol !== "undefined" ? desolasol : []),
@@ -100,6 +108,7 @@ const pistas = [
     ...(typeof thelaplanta !== "undefined" ? thelaplanta: []),
     ...(typeof willycampero !== "undefined" ? willycampero: []),
     ...(typeof maroyu !== "undefined" ? maroyu : [])
+    
 ];
 
 function crearTarjetaPista(pista) {
