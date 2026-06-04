@@ -437,7 +437,7 @@ const explosionCumbiera = [
     {
         titulo: "Hotel California",
         artista: "Explosión Cumbiera, The La Planta, Willy Campero",
-        grupos: ["explosion-cumbiera", "thelaplanta","willycampero"],
+        grupos: ["thelaplanta", "explosion-cumbiera","willycampero"],
         genero: "Cumbia con Sabor",
         tono: "-",
         bpm: "81",

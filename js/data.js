@@ -14,6 +14,13 @@ const grupos = [
         generoPrincipal: "Cumbia con Sabor",
         imagen: "assets/img/grupos/sangre-cumbiera.jpg"
     },
+    {
+        id: "desolasol",
+        nombre: "De Sol A Sol",
+        descripcion: "Repertorio de instrumentales",
+        generoPrincipal: "Cumbia con Sabor",
+        imagen: "assets/img/grupos/desolasol.jpg"
+    },
 
     {
         id: "maroyu",
@@ -70,18 +77,28 @@ const grupos = [
         descripcion: "Repertorio de instrumentales",
         generoPrincipal: "Cumbia Uruguaya",
         imagen: "assets/img/artistas/thelaplanta.jpg"
+    },
+    {
+        id: "willycampero",
+        nombre: "Willy Campero",
+        descripcion: "Repertorio de instrumentales",
+        generoPrincipal: "Cumbia Argentina",
+        imagen: "assets/img/artistas/willycampero.png"
     }
 ];
 
 const pistas = [
     ...(typeof explosionCumbiera !== "undefined" ? explosionCumbiera : []),
     ...(typeof sangreCumbiera !== "undefined" ? sangreCumbiera : []),
+    ...(typeof desolasol !== "undefined" ? desolasol : []),
     ...(typeof turromantikos !== "undefined" ? turromantikos : []),
     ...(typeof davidcastro !== "undefined" ? davidcastro : []),
     ...(typeof cartelcumbiero !== "undefined" ? cartelcumbiero : []),
     ...(typeof grupoclaros !== "undefined" ? grupoclaros : []),
     ...(typeof superauto !== "undefined" ? superauto : []),
     ...(typeof bonnylovy !== "undefined" ? bonnylovy: []),
+    ...(typeof thelaplanta !== "undefined" ? thelaplanta: []),
+    ...(typeof willycampero !== "undefined" ? willycampero: []),
     ...(typeof maroyu !== "undefined" ? maroyu : [])
 ];
 
