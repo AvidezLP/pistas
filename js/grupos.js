@@ -23,7 +23,10 @@ function mostrarGrupos() {
         })
         .sort((a, b) => a.nombre.localeCompare(b.nombre))
         .forEach(grupo => {
-            const total = pistas.filter(p => p.grupoId === grupo.id).length;
+            const total = pistas.filter(p =>
+    p.grupoId === grupo.id ||
+    (p.grupos && p.grupos.includes(grupo.id))
+).length;
 
             const item = document.createElement("div");
             item.className = "col-md-6 col-lg-4";

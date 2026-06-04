@@ -40,7 +40,7 @@ const grupos = [
         id: "cartelcumbiero",
         nombre: "El New Cartel Cumbiero",
         descripcion: "Repertorio de instrumentales",
-        generoPrincipal: "Cumbia Tropical",
+        generoPrincipal: "Cumbia con Sabor",
         imagen: "assets/img/grupos/cartelcumbiero.png"
     },
     {
@@ -49,6 +49,27 @@ const grupos = [
         descripcion: "Repertorio de instrumentales",
         generoPrincipal: "Cumbia Chicha",
         imagen: "assets/img/grupos/grupoclaros.jpg"
+    },
+    {
+        id: "superauto",
+        nombre: "Super Auto",
+        descripcion: "Repertorio de instrumentales",
+        generoPrincipal: "Cumbia Mexicana",
+        imagen: "assets/img/grupos/superauto.jpg"
+    },
+    {
+        id: "bonnylovy",
+        nombre: "Bonny Lovy",
+        descripcion: "Repertorio de instrumentales",
+        generoPrincipal: "Cumbia Boliviana",
+        imagen: "assets/img/artistas/bonnylovy.jpg"
+    },
+    {
+        id: "thelaplanta",
+        nombre: "The La Planta",
+        descripcion: "Repertorio de instrumentales",
+        generoPrincipal: "Cumbia Uruguaya",
+        imagen: "assets/img/artistas/thelaplanta.jpg"
     }
 ];
 
@@ -59,6 +80,8 @@ const pistas = [
     ...(typeof davidcastro !== "undefined" ? davidcastro : []),
     ...(typeof cartelcumbiero !== "undefined" ? cartelcumbiero : []),
     ...(typeof grupoclaros !== "undefined" ? grupoclaros : []),
+    ...(typeof superauto !== "undefined" ? superauto : []),
+    ...(typeof bonnylovy !== "undefined" ? bonnylovy: []),
     ...(typeof maroyu !== "undefined" ? maroyu : [])
 ];
 
