@@ -1,5 +1,12 @@
 const grupos = [
     {
+        id: "sondiluz",
+        nombre: "Son Di Luz",
+        descripcion: "Repertorio de instrumentales",
+        generoPrincipal: "Cumbia con Sabor",
+        imagen: "assets/img/grupos/son-di-luz.png"
+    },
+    {
         id: "elpuntodelarisa",
         nombre: "El Punto De La Risa",
         descripcion: "Repertorio de instrumentales",
@@ -110,6 +117,7 @@ const grupos = [
 ];
 
 const pistas = [
+    ...(typeof sondiluz !== "undefined" ? sondiluz : []),
     ...(typeof elpuntodelarisa !== "undefined" ? elpuntodelarisa : []),
     ...(typeof divinas !== "undefined" ? divinas : []),
     ...(typeof explosionCumbiera !== "undefined" ? explosionCumbiera : []),
