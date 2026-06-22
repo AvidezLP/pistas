@@ -116,7 +116,7 @@ const explosionCumbiera = [
     },
     {
         titulo: "Tattoo (ReMiX)",
-        artista: "Explosión Cumbiera",
+        artista: "Explosión Cumbiera, El New Cartel Cumbiero, Jhonny y Su Agrupación Claros",
         grupos: ["explosion-cumbiera", "grupoclaros","cartelcumbiero"],
         genero: "Cumbia con Sabor",
         tono: "-",

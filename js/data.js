@@ -1,5 +1,12 @@
 const grupos = [
     {
+        id: "elpuntodelarisa",
+        nombre: "El Punto De La Risa",
+        descripcion: "Repertorio de instrumentales",
+        generoPrincipal: "Cumbia con Sabor",
+        imagen: "assets/img/grupos/elpuntodelarisa.jpg"
+    },
+    {
         id: "divinas",
         nombre: "Divinas",
         descripcion: "Repertorio de instrumentales",
@@ -91,12 +98,22 @@ const grupos = [
         descripcion: "Repertorio de instrumentales",
         generoPrincipal: "Cumbia Argentina",
         imagen: "assets/img/artistas/willycampero.png"
+    },
+    {
+        id: "miguelorias",
+        nombre: "Miguel Orías",
+        descripcion: "Repertorio de instrumentales",
+        generoPrincipal: "Cumbia Tropical",
+        imagen: "assets/img/grupos/miguelorias.jpg"
     }
+
 ];
 
 const pistas = [
+    ...(typeof elpuntodelarisa !== "undefined" ? elpuntodelarisa : []),
     ...(typeof divinas !== "undefined" ? divinas : []),
     ...(typeof explosionCumbiera !== "undefined" ? explosionCumbiera : []),
+    ...(typeof miguelorias !== "undefined" ? miguelorias : []),
     ...(typeof sangreCumbiera !== "undefined" ? sangreCumbiera : []),
     ...(typeof desolasol !== "undefined" ? desolasol : []),
     ...(typeof turromantikos !== "undefined" ? turromantikos : []),
@@ -157,10 +174,32 @@ function crearTarjetaPista(pista) {
             </p>
 
             <div class="track-meta">
-                <span>${pista.genero}</span>
-                <span>${pista.tono}</span>
-                <span>${pista.bpm} BPM</span>
-            </div>
+
+    <span>
+        <i class="bi bi-vinyl"></i>
+        ${pista.genero}
+    </span>
+
+    ${pista.tono ? `
+    <span>
+        <i class="bi bi-music-note"></i>
+        ${pista.tono}
+    </span>
+    ` : ""}
+
+    <span>
+        <i class="bi bi-speedometer2"></i>
+        ${pista.bpm} BPM
+    </span>
+
+    ${pista.duracion ? `
+    <span>
+        <i class="bi bi-clock"></i>
+        ${pista.duracion}
+    </span>
+    ` : ""}
+
+</div>
 
             <div class="mt-3">
                 <a href="${pista.descarga}"
