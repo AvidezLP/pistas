@@ -1,4 +1,13 @@
 const grupos = [
+
+//CUmbia Con Sabor
+{
+        id: "euphoria",
+        nombre: "Euphoria",
+        descripcion: "Repertorio de instrumentales",
+        generoPrincipal: "Cumbia con Sabor",
+        imagen: "assets/img/grupos/euphoria.jpg"
+    },
     {
         id: "sondiluz",
         nombre: "Son Di Luz",
@@ -42,6 +51,7 @@ const grupos = [
         generoPrincipal: "Cumbia con Sabor",
         imagen: "assets/img/grupos/desolasol.jpg"
     },
+//chicha
 
     {
         id: "maroyu",
@@ -49,6 +59,13 @@ const grupos = [
         descripcion: "Repertorio de instrumentales",
         generoPrincipal: "Cumbia Chicha",
         imagen: "assets/img/grupos/maroyu.jpg"
+    },
+    {
+        id: "senxazion",
+        nombre: "Senxazion",
+        descripcion: "Repertorio de instrumentales",
+        generoPrincipal: "Cumbia Chicha",
+        imagen: "assets/img/grupos/senxazion.jpg"
     },
     {
         id: "turromantikos",
@@ -117,6 +134,8 @@ const grupos = [
 ];
 
 const pistas = [
+    ...(typeof euphoria !== "undefined" ? euphoria : []),
+    ...(typeof senxazion !== "undefined" ? senxazion : []),
     ...(typeof sondiluz !== "undefined" ? sondiluz : []),
     ...(typeof elpuntodelarisa !== "undefined" ? elpuntodelarisa : []),
     ...(typeof divinas !== "undefined" ? divinas : []),
