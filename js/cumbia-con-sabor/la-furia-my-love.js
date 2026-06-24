@@ -197,7 +197,7 @@ const lafuriamylove = [
         tono: "-",
         bpm: "100",
         duracion: "10:11",
-        descarga: ""
+        descarga: "https://www.mediafire.com/file/yu7s7vfd9nhlph2/20_Mix_talisman_-_La_Furia_My_Love_%2528Instrumental%2529.mp3/file"
     },
     {
         titulo: "Amor De Lejos",
@@ -207,7 +207,7 @@ const lafuriamylove = [
         tono: "-",
         bpm: "98",
         duracion: "3:34",
-        descarga: ""
+        descarga: "https://www.mediafire.com/file/cs0ww7g98z7fo7d/21_Amor_de_lejos_-_La_Furia_My_Love_%2528Instrumental%2529.mp3/file"
     },
     {
         titulo: "Tu Maldita Trampa",
@@ -217,7 +217,7 @@ const lafuriamylove = [
         tono: "-",
         bpm: "98",
         duracion: "5:14",
-        descarga: ""
+        descarga: "https://www.mediafire.com/file/hxx5vo58o71ao0s/22_Tu_Maldita_Trampa_-_La_Furia_My_Love_%2528Instrumental%2529.mp3/file"
     },
     {
         titulo: "Amor Prohibido Remaster",
@@ -227,6 +227,6 @@ const lafuriamylove = [
         tono: "-",
         bpm: "98",
         duracion: "4:30",
-        descarga: ""
+        descarga: "https://www.mediafire.com/file/vvtqi9mlpi0m5we/23_Amor_Prohibido_Remaster_-_La_Furia_My_Love_%2528Instrumental%2529.mp3/file"
     },
 ];
