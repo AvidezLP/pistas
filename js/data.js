@@ -1,7 +1,49 @@
 const grupos = [
 
 //CUmbia Con Sabor
-{
+    {
+        id: "lafuriamylove",
+        nombre: "La Furia My Love",
+        descripcion: "Repertorio de instrumentales",
+        generoPrincipal: "Cumbia con Sabor",
+        imagen: "assets/img/grupos/lafuriamylove.jpg"
+    },
+    {
+        id: "loschicosfieles",
+        nombre: "Los Chicos Fieles",
+        descripcion: "Repertorio de instrumentales",
+        generoPrincipal: "Cumbia con Sabor, Chicha",
+        imagen: "assets/img/grupos/loschicosfieles.jpg"
+    },
+    {
+        id: "saymonyloscochalitos",
+        nombre: "Saymon Y Los Cochalitos",
+        descripcion: "Repertorio de instrumentales",
+        generoPrincipal: "Cumbia con Sabor",
+        imagen: "assets/img/grupos/saymonyloscochalitos.jpg"
+    },
+    {
+        id: "saborsabor",
+        nombre: "Sabor Sabor",
+        descripcion: "Repertorio de instrumentales",
+        generoPrincipal: "Cumbia con Sabor",
+        imagen: "assets/img/grupos/sabor-sabor.jpg"
+    },
+    {
+        id: "histeria",
+        nombre: "Histeria",
+        descripcion: "Repertorio de instrumentales",
+        generoPrincipal: "Cumbia con Sabor",
+        imagen: "assets/img/grupos/histeria.jpg"
+    },
+    {
+        id: "ondakumbiera",
+        nombre: "Onda Kumbiera",
+        descripcion: "Repertorio de instrumentales",
+        generoPrincipal: "Cumbia con Sabor",
+        imagen: "assets/img/grupos/onda-kumbiera.jpg"
+    },
+    {
         id: "euphoria",
         nombre: "Euphoria",
         descripcion: "Repertorio de instrumentales",
@@ -134,6 +176,12 @@ const grupos = [
 ];
 
 const pistas = [
+    ...(typeof loschicosfieles !== "undefined" ? loschicosfieles : []),
+    ...(typeof saymonyloscochalitos !== "undefined" ? saymonyloscochalitos : []),
+    ...(typeof lafuriamylove !== "undefined" ? lafuriamylove : []),
+    ...(typeof histeria !== "undefined" ? histeria : []),
+    ...(typeof saborsabor !== "undefined" ? saborsabor : []),
+    ...(typeof ondakumbiera !== "undefined" ? ondakumbiera : []),
     ...(typeof euphoria !== "undefined" ? euphoria : []),
     ...(typeof senxazion !== "undefined" ? senxazion : []),
     ...(typeof sondiluz !== "undefined" ? sondiluz : []),
