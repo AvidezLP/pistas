@@ -6,7 +6,7 @@ const paginaciones = document.querySelectorAll(".paginacion-pistas");
 
 let generoActual = "Todos";
 let paginaActual = 1;
-const pistasPorPagina = 20;
+const pistasPorPagina = 30;
 
 function limpiarTexto(texto) {
     return texto

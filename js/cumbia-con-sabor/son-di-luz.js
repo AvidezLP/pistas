@@ -19,4 +19,4 @@ const sondiluz = [
         duracion: "8:02",
         descarga: "https://www.mediafire.com/file/3ib6dsbnnkhvsz4/1_Agrupaci%25C3%25B3n_Son_Di_Luz_-_Mix_Luz_%2528Instrumental%2529.mp3/file"
     },
-    ];
+];

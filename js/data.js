@@ -1,5 +1,20 @@
 const grupos = [
-
+//Folklore
+{
+    id: "chilajatun",
+    nombre: "CHILA JATUN",
+    descripcion: "Repertorio de instrumentales",
+    generoPrincipal: "Folclore",
+    imagen: "assets/img/folclore/chila-jatun.jpg"
+},
+//Urbano
+{
+    id: "omiold",
+    nombre: "Omio LD",
+    descripcion: "Repertorio de instrumentales",
+    generoPrincipal: "Urbamo",
+    imagen: "assets/img/urbano/omiold.jpg"
+},
 //CUmbia Con Sabor
     {
         id: "lafuriamylove",
@@ -176,6 +191,8 @@ const grupos = [
 ];
 
 const pistas = [
+    ...(typeof chilajatun !== "undefined" ? chilajatun : []),
+    ...(typeof omiold !== "undefined" ? omiold : []),
     ...(typeof loschicosfieles !== "undefined" ? loschicosfieles : []),
     ...(typeof saymonyloscochalitos !== "undefined" ? saymonyloscochalitos : []),
     ...(typeof lafuriamylove !== "undefined" ? lafuriamylove : []),
