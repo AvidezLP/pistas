@@ -9,6 +9,13 @@ const grupos = [
 },
 //Urbano
 {
+    id: "eliasayaviri",
+    nombre: "Elias Ayaviri",
+    descripcion: "Repertorio de instrumentales",
+    generoPrincipal: "Urbano",
+    imagen: "assets/img/urbano/eliasayaviri.jpg"
+},
+{
     id: "omiold",
     nombre: "Omio LD",
     descripcion: "Repertorio de instrumentales",
@@ -16,6 +23,13 @@ const grupos = [
     imagen: "assets/img/urbano/omiold.jpg"
 },
 //CUmbia Con Sabor
+{
+    id: "losseniorslanuevapotencia",
+    nombre: "Los Seniors La Nueva Potencia",
+    descripcion: "Repertorio de instrumentales",
+    generoPrincipal: "Cumbia Con Sabor",
+    imagen: "assets/img/grupos/losseniorslanuevapotencia.jpg"
+},
     {
         id: "lafuriamylove",
         nombre: "La Furia My Love",
@@ -191,6 +205,8 @@ const grupos = [
 ];
 
 const pistas = [
+    ...(typeof eliasayaviri !== "undefined" ? eliasayaviri : []),
+    ...(typeof losseniorslanuevapotencia !== "undefined" ? losseniorslanuevapotencia : []),
     ...(typeof chilajatun !== "undefined" ? chilajatun : []),
     ...(typeof omiold !== "undefined" ? omiold : []),
     ...(typeof loschicosfieles !== "undefined" ? loschicosfieles : []),
