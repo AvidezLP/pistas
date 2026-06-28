@@ -62,6 +62,21 @@ function mostrarGrupos() {
 
             listaGrupos.appendChild(item);
         });
+        const estadisticas = document.getElementById("estadisticas");
+
+if (estadisticas) {
+    estadisticas.innerHTML = `
+        <span class="group-count">
+            <i class="bi bi-folder2-open"></i>
+            ${grupos.length} Grupos o Artistas
+        </span>
+
+        <span class="group-count">
+            <i class="bi bi-music-note-list"></i>
+            ${pistas.length} Temas En Total
+        </span>
+    `;
+}
 }
 
 buscadorGrupos.addEventListener("input", mostrarGrupos);

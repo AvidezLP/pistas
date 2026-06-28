@@ -3,6 +3,7 @@ const buscador = document.getElementById("buscador");
 const botonesFiltro = document.querySelectorAll(".filter-btn");
 const sinResultados = document.getElementById("sinResultados");
 const paginaciones = document.querySelectorAll(".paginacion-pistas");
+const estadisticasPistas = document.getElementById("estadisticasPistas");
 
 let generoActual = "Todos";
 let paginaActual = 1;
@@ -29,6 +30,20 @@ function mostrarPistas() {
             return coincideGenero && contenido.includes(texto);
         })
         .sort((a, b) => a.titulo.localeCompare(b.titulo));
+        
+    if (estadisticasPistas) {
+    estadisticasPistas.innerHTML = `
+        <span class="group-count">
+            <i class="bi bi-folder2-open"></i>
+            ${grupos.length} Grupos O Artistas
+        </span>
+
+        <span class="group-count">
+            <i class="bi bi-music-note-list"></i>
+            ${pistas.length} Temas En Total
+        </span>
+    `;
+}
 
     const totalPaginas = Math.ceil(resultados.length / pistasPorPagina);
 
